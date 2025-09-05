@@ -36,6 +36,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+}
+
 /* Header */
 
 .header {
@@ -123,6 +127,7 @@ a {
 .hero {
   background: #2e2f42;
   height: 618px;
+  padding: 188px 0;
 }
 
 .hero-title {
@@ -150,6 +155,10 @@ a {
   margin-bottom: 188px;
   padding: 16px 32px;
   margin-left: 480px;
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
 }
 
 .hero-btn:hover,
@@ -159,29 +168,56 @@ a {
 
 /* Features */
 
-.features-list {
-  display: flex;
+.features{
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
+.visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+  }
+  
+.features-subtitle{
+  margin-bottom: 8px;
+}
+
+.features-list {
+  display: flex;
+  gap: 24px;
+}
+
 .features-item {
-  width: 264;
+  width: calc((100% - 72px) / 4);
 }
 
 /* Team */
 
 .team {
   background-color: #f4f4fd;
+  padding: 120px 0;
 }
 
 .team-item {
   background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-worker{
+  padding: 32px 0;
+
 }
 
 .team-title {
-  padding-top: 120px;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .team-list {
@@ -193,7 +229,7 @@ a {
 }
 
 .team-subtitle {
-  padding-top: 36px;
+  margin-bottom: 8px;
   text-align: center;
 }
 
@@ -233,9 +269,13 @@ a {
 
 /* Portfolio */
 
+.portfolio{
+  padding-top: 120px; padding-bottom: 120px;
+}
+
 .portfolio-title {
   padding-top: 120px;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .portfolio-list {
@@ -252,9 +292,16 @@ a {
   width: calc((100% - 48px) / 3);
 }
 
+.div-portfolio{
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
 .portfolio-subtitle {
   padding-top: 32px;
   padding-left: 16px;
+  margin-bottom: 8px;
 }
 
 .portfolio-description {
@@ -266,11 +313,12 @@ a {
 
 .footer-page {
   background-color: #2e2f42;
+  padding: 100px 0;
 }
 
-.div-footer {
-  padding-top: 100px;
-  padding-bottom: 16px;
+.footer-logo{
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .footer-description {
